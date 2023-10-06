@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.link{
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  height: 0px;
+  margin-left: 10px;
+}
+
+
+button {
+  background-color: rgb(99, 92, 25);
+  transition: transform 200ms, box-shadow 200ms;
+  border-radius: 4px;
+  padding: 5px;
+  box-shadow: 3px 2px 5px;
+}
+
+button:active {
+  box-shadow: 2px 3px 1px;
+  transform: translate(4px, 6px);
+}
+
+header > nav {
+  display: flex;
+  gap: 1rem;
+  background-color: rgb(196, 194, 194);
+  padding: 10px;
+}
+
+main {
+  display: flex;
+}
+
+main > nav {
+  width: 20vw;
+  height: 1200px;
+  gap: 0.5rem;
+  padding: 10px;
+  display: flex;
+  flex-direction: column; 
+}
+
+main > section {
+  width: 80vw;
+  height: 1200px;
+
+}
+
+
+.loader {
+  /* Define a respespectivamente a largura e altura do elemento, como também o estilo da borda,
+     tamanho das bordas e formato altura e largura. Além disso, no loader é definido a animação de carregamento, como direção. 
+ */
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: blue;
+  border-radius: 50%;
+  display: block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin: 2rem auto;
+}
+
+@keyframes rotation {
+  /* Na animação, de início teremos uma rotação de zero, por fim terá uma volta completa de 100% */
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    flex-direction: column;
+  }
+
+  main > nav {
+    flex-direction: row;
+    height: auto;
+  }
+
+  main > section {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+  }
+
+}
